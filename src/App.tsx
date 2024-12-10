@@ -8,6 +8,9 @@ import Notice from "./pages/Notice";
 import My from "./pages/My";
 import { Toaster } from "react-hot-toast";
 import AdminLayout from "./layouts/AdminLayout";
+import AdminNotice from "./components/admin/AdminNotice";
+import AdminClubs from "./components/admin/AdminClubs";
+import AdminHome from "./components/admin/AdminHome";
 
 const App = () => {
   return (
@@ -45,7 +48,9 @@ const App = () => {
           </Route>
 
           <Route path="/admin" element={<AdminLayout />}>
-            <Route index element={<Home />} />
+            <Route index element={<AdminHome />} />
+            <Route path="notice" element={<AdminNotice />} />
+            <Route path="clubs" element={<AdminClubs />} />
           </Route>
 
           <Route path="/login" element={<Login />} />
